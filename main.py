@@ -1,11 +1,10 @@
 import pip
-pip.main(['install', 'mysql-connector-python'])
 import mysql.connector
-
+import traceback
 from flask import Flask, jsonify, request
 from flask_restful import Api, Resource
 from config import host, port, user, password, database
-import traceback
+
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
